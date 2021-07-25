@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Admin\'s of KD School</string>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "590031352797",
+    "project_id": "admin-s-of-kd-school",
+    "storage_bucket": "admin-s-of-kd-school.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590031352797:android:1cf1a132a0182802173c34",
+        "android_client_info": {
+          "package_name": "com.example.adminsofkdschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590031352797-ofd1ti0g8ooiistpos50jg3ljqr5nffp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJRNUZgkLnZUXYXBzGgFkldrkSwnqxePk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590031352797-ofd1ti0g8ooiistpos50jg3ljqr5nffp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
