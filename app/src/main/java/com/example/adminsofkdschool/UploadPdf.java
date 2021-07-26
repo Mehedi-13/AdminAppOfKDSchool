@@ -147,7 +147,11 @@ public class UploadPdf extends AppCompatActivity {
                         while (!uriTask.isComplete());
                         Uri uri= uriTask.getResult();
                         uploadData(String.valueOf(uri));
+
+                        startActivity(new Intent(UploadPdf.this,Dashboard.class));
+
                     }
+
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull @NotNull Exception e) {

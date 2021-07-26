@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:layout_margin="5dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -18,12 +19,12 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/avater_profile"/>
+                android:src="@drawable/logoschool"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Admin's of KD School"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="8dp"
                 android:textSize="18dp"
                 android:textColor="@color/textColor"/>
 
@@ -43,6 +44,8 @@
             android:layout_height="wrap_content"
             android:text="Allah knows Everything."
             android:textSize="17sp"
+            android:layout_marginVertical="16dp"
+
             android:textColor="@color/textColor"/>
         <ImageView
             android:id="@+id/deleteNoticeImage"
