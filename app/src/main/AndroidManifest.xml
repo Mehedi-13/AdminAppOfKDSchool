@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminsOfKDSchool">
-        <activity android:name=".notice.DeleteNoticeActivity"></activity>
+        <activity android:name=".LoginActivity" android:theme="@style/Theme.MaterialComponents.NoActionBar">
+
+
+        </activity>
+        <activity android:name=".notice.DeleteNoticeActivity" />
         <activity android:name=".faculty.UpdateTeacherActivity" />
         <activity android:name=".faculty.AddTeacher" />
         <activity android:name=".faculty.UpdateFaculty" />

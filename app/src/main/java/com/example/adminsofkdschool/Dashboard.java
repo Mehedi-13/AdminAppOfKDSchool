@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -12,12 +13,20 @@ import com.example.adminsofkdschool.notice.DeleteNoticeActivity;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView  uploadeTheNotice,addGalleryImage,addEbook,faculty,deleteNotice;
-
+    private CardView  uploadeTheNotice,addGalleryImage,addEbook,faculty,deleteNotice,logout;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        sharedPreferences =this.getSharedPreferences("login",MODE_PRIVATE);
+        editor= sharedPreferences.edit();
+
+        if (sharedPreferences.getString("isLogin","false").equals("false")){
+            openLogin();
+        }
 
         uploadeTheNotice= findViewById(R.id.addNotice);
         uploadeTheNotice.setOnClickListener(this);
@@ -34,6 +43,14 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         deleteNotice=findViewById(R.id.deleteNotice);
         deleteNotice.setOnClickListener(this);
 
+        logout=findViewById(R.id.logOut);
+        logout.setOnClickListener(this);
+
+    }
+
+    private void openLogin() {
+        startActivity(new Intent(Dashboard.this,LoginActivity.class));
+        finish();
     }
 
     @Override
@@ -65,6 +82,13 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
                 intent= new Intent(Dashboard.this, DeleteNoticeActivity.class);
                 startActivity(intent);
                 break;
+
+            case R.id.logOut:
+                editor.putString("isLogin","false");
+                editor.commit();
+                openLogin();
+                break;
+
         }
 
     }
